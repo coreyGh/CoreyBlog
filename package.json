@@ -1,0 +1,28 @@
+{
+  "name": "coreyblog",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreyGh/CoreyBlog.git"
+  },
+  "keywords": [
+    "博客",
+    "blog"
+  ],
+  "author": "Corey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coreyGh/CoreyBlog/issues"
+  },
+  "homepage": "https://github.com/coreyGh/CoreyBlog#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
