@@ -97,6 +97,10 @@ function filterBlogList(blogListData) {
         + '</li>' + sliderHtml;
 }
 
+function loadFlag(){
+
+}
+
 
 
 

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "技术",
+    "color": "#00a8e6"
+  },
+  {
+    "name": "前端",
+    "color": "#337ab7"
+  },
+  {
+    "name": "Vue.js",
+    "color": "#00a8e6"
+  },
+  {
+    "name": "react.js",
+    "color": "#337ab7"
+  },
+  {
+    "name": "Native",
+    "color": "#00a8e6"
+  }
+]

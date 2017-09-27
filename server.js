@@ -1,8 +1,8 @@
 /**
  * Created by gaohu on 2017/8/10.
  */
+var https = require('https');
 var http = require('http');
-var port = 3000;
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
@@ -27,7 +27,15 @@ var mine = {
     "wmv": "video/x-ms-wmv",
     "xml": "text/xml"
 };
-var server = http.createServer(function (req, rep) {
+var options = {
+    key: fs.readFileSync('./214275541520690.key'),
+    cert: fs.readFileSync('./214275541520690.pem')
+};
+var httpServer = http.createServer(function (req, rep) {
+    rep.writeHead(302, {'Location' :  'https://' + req.headers.host + req.url});
+    rep.end();
+});
+var httpsServer = https.createServer(options,function (req, rep) {
     var pathName = url.parse(req.url).pathname;
     if (pathName.charAt(pathName.length - 1) == '/') {
         pathName += 'index.html';
@@ -61,8 +69,9 @@ var server = http.createServer(function (req, rep) {
         }
     })
 });
-server.listen(port, hostname);
-console.log("Server runing at port: " + port + ".");
+httpsServer.listen(443);
+httpServer.listen(80);
+console.log("Server is runing");
 
 
 
